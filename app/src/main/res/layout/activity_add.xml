@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:id="@+id/main">
+
+    <!-- EditText for smartphone name -->
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter smartphone name"
+        android:inputType="text"
+        android:padding="12dp" />
+
+    <!-- EditText for smartphone price -->
+    <EditText
+        android:id="@+id/editTextPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter smartphone price"
+        android:inputType="numberDecimal"
+        android:padding="12dp" />
+
+    <!-- EditText for smartphone image URL -->
+    <EditText
+        android:id="@+id/editTextImageUrl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter smartphone image URL"
+        android:inputType="textUri"
+        android:padding="12dp" />
+
+    <!-- Button to add smartphone -->
+    <Button
+        android:id="@+id/buttonAddSmartphone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Smartphone"
+        android:layout_marginTop="24dp"
+        android:padding="12dp"
+
+        android:textColor="@android:color/white" />
+
+</LinearLayout>
