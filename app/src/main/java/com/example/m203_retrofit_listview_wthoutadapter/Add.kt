@@ -2,6 +2,7 @@ package com.example.m203_retrofit_listview_wthoutadapter
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -58,9 +59,9 @@ class Add : AppCompatActivity() {
 
 
 
-
+                val sm = Smartphone(0,name,price,imageUrl)
                 // Appel à l'API pour ajouter le smartphone
-                apiService.addSmartphone(name,price,imageUrl).enqueue(object : Callback<AddResponse> {
+                apiService.addSmartphone(sm).enqueue(object : Callback<AddResponse> {
                     override fun onResponse(
                         call: Call<AddResponse>,
                         response: Response<AddResponse>
@@ -93,6 +94,8 @@ class Add : AppCompatActivity() {
                             "Error: ${t.message}",
                             Toast.LENGTH_LONG
                         ).show()
+
+                        Log.d("Retro Error",t.message.toString())
                     }
                 })
             }

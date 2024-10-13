@@ -12,11 +12,6 @@ interface ApiService {
     @GET("SmartphoneAPI/readAll.php")
     fun getSmartphones(): Call<List<Smartphone>>
 
-    @FormUrlEncoded
     @POST("SmartphoneAPI/create.php")
-    fun addSmartphone(
-        @Field("nom") nom: String,
-        @Field("prix") prix: Double,
-        @Field("image") image: String
-    ): Call<AddResponse>
+    fun addSmartphone(@Body smartphone: Smartphone): Call<AddResponse>
 }
